@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      href="resources/favicon.ico"
+      type="image/x-icon"
+      sizes="96x96"
+    />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Contact Page | devChallenges.io</title>
+
+    <!--You are welcome to delete these styles or modify them in your own stylesheet -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+         background-image: url(resources/background@2x.png);
+         background-size: cover;
+         font-family:Be Vietnam Pro;
+      }
+
+      .author-info {
+        font-size: 14px;
+        text-align: center;
+        margin-top: 16px;
+        color: rgb(55, 65, 81);
+      }
+
+      .author-info a {
+        text-decoration: none;
+      }
+      h1{
+        font-family:Be Vietnam Pro;
+        font-size:64px;
+        color:#FFFFFF;
+        text-align:center;
+
+      }
+     label{
+      color:white;
+      font-size:14px;
+      font-family:Be Vietnam Pro;
+     }
+      .container{
+        display:flex;
+        width:1000px;
+        height:100vh;
+        justify-content:center;
+        align-items:center;
+        
+      
+         
+         }
+         form{
+           background: rgba(255, 255, 255, 0.1); /* transparent white */
+  backdrop-filter: blur(20px);          /* blur the background behind */
+  -webkit-backdrop-filter: blur(20px);
+          border-radius:12px;
+          max-width:600px;
+          width:100%;
+          padding:40px;
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);       
+         }
+         .row{
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+         }
+         .form-group {
+          display: flex;
+          flex-direction: column;
+          flex: 1 1 45%; /* allow wrapping to new line */
+         }
+
+         input,
+select {
+  height: 50px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+textarea {
+  width: 100%;
+  height: 190px; /* match the image height */
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  resize: none; /* disables resizing for a cleaner look */
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  height: 50px;
+  background-color: #FFFFFF;
+  color: #4036A9;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+label {
+  color:black;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  margin-bottom: 6px;
+}
+h2{
+  font-size:32px;
+  text-align:center;
+}
+.title {
+  max-width: 600px; /* same as form max-width */
+  width: 100%;
+  margin: 40px auto 20px;
+  padding: 0 40px;   /* same as form padding */
+  text-align: left;  /* align text with form fields */
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #E0E0E0;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+/* Base styles (desktop ≥1280px) are already in place */
+
+/* Laptops/Tablets: 1024px */
+@media (min-width: 1281px) {
+  .container {
+    margin-left: 190px;
+  }
+}
+
+
+@media (max-width: 1280px) {
+  h1 {
+    font-size: 48px;
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  form {
+    max-width: 90%;
+    padding: 30px;
+  }
+}
+
+/* Tablets and smaller screens: ≤1024px */
+@media (max-width: 1024px) {
+  .form-group {
+    flex: 1 1 100%; /* Make fields stack */
+  }
+
+  form {
+    padding: 24px;
+  }
+
+  textarea {
+    height: 160px;
+  }
+
+  button {
+    font-size: 18px;
+  }
+}
+
+/* Mobile screens: ≤640px */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 28px;
+    line-height: 1.2;
+    margin: 20px 0;
+    padding: 0 10px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  form {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    width: 100%;
+  }
+
+  textarea {
+    height: 140px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+}
+
+
+.logo {
+  padding: 20px 40px;
+}
+
+.logo img {
+  width: 120px; /* adjust size */
+  height: auto;
+}
+
+         
+         
+        
+    </style>
+  </head>
+  <body>
+    <!-- 
+  Interested in our business pricing?
+   
+  Fill out the form to view details and we’ll contact you as soon as possible.
+  
+  Name
+
+  Ethan Johnson
+
+  Company Email
+  
+  ethan@johnson.com
+
+  Company Size
+
+  50-100 employees
+  
+  Subject
+
+  Building Landing pages
+
+  Message
+
+  50-100 employees
+
+  Contact Sales
+  -->
+  <div class="logo">
+  <img src="resources/Logo.svg" alt="Company Logo">
+</div>
+
+  <div class="title">
+    <h1> Interested in our business pricing?</h1>
+<h2>Fill out the form to view details and we’ll contact you as soon as possible.</h2>
+</div>
+
+<div class="container">
+<form>
+  <div class="row">
+  <div class="form-group">
+  <label for="name" >Name</label>
+  <input type="text" id="name">
+  </div>
+  <div class="form-group">
+  <label for="email">Company Email</label>
+  <input type="email" id="email">
+  </div>
+  <div class="form-group">
+  <label for="fifty">Company Size</label>
+  <select id="fifty">
+    <option value="fifty">50-100 employees</option>
+  </select>
+  </div>
+  <div class="form-group">
+  <label for="subject">Subject</label>
+    <select id="subject">
+    <option value="subject">Building Landing pages</option>
+  </select>
+  </div>
+  <div class="form-group">
+  <label for="message">Message</label>
+   <textarea id="message" name="message" placeholder="50-100 employees"></textarea>
+  </div>
+  </div>
+  <button>Contact Sales</button>
+</form>
+</div>  
+  <div class="author-info">
+      Coded by <a href="#">David Maloba</a> | Challenge by
+      <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
+        >devChallenges.io</a
+      >.
+    </div>
+  </body>
+</html>
